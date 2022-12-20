@@ -135,12 +135,39 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+@keyframes hovered_card {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+        box-shadow: 0 0 5px 0 #2B4FB3;
+    }
+}
+
+@keyframes unhovered_card {
+    from {
+        transform: scale(1.05);
+        box-shadow: 0 0 5px 0 #2B4FB3;
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
 .card {
     display: inline-block;
     background: #456BD9;
     border-radius: 20px;
     height: 500px;
     width: 300px;
+    animation: 0.5s ease forwards unhovered_card;
+    animation-direction: normal;
+}
+
+.card:hover {
+    animation: 0.5s ease forwards hovered_card;
+    animation-direction: normal;
 }
 
 .profile {
