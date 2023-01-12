@@ -256,3 +256,21 @@ body {
     border-radius: 100%;
     box-shadow: 0 0 5px 0 #2B4FB3;
 }
+
+body {
+    color-scheme: dark;
+}
+
+div {
+    color-scheme: dark;
+}
+
+.light-body {
+    background: linear-gradient(45deg, rebeccapurple, lightcoral) no-repeat center center fixed;
+    background-size: 400% 400%;
+}
+
+.dark-body {
+    background: linear-gradient(45deg, #4B155C, #471578) no-repeat center center fixed;
+    background-size: 400% 400%;
+}
