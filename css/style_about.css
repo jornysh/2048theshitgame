@@ -8,10 +8,29 @@ html, body, footer, .container {
 }
 
 body {
-    background: linear-gradient(45deg, rebeccapurple, lightcoral) no-repeat center center fixed;
+    background: linear-gradient(45deg, #663399, #f08080) no-repeat center center fixed;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    animation: gradient 15s ease infinite;
+    background: rgb(240,128,128);
+    background: linear-gradient(45deg, rgba(240,128,128,1) 0%, rgba(102,51,153,1) 40%, rgba(102,51,153,1) 58%, rgba(240,128,128,1) 100%);
+    background-size: 400% 400%;
 }
 
 .logo {
