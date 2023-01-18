@@ -123,10 +123,13 @@ body {
     border-radius: 10px;
     margin: 10px 30px;
     /*outline: black dotted;*/
+    cursor: pointer;
 }
 
 .Upload-image:hover {
     filter: brightness(1.1);
+    cursor: pointer;
+
 }
 
 #file-input {
@@ -195,6 +198,7 @@ body {
     padding-left: 1%;
     padding-right: 1%;
     overflow: hidden;
+    cursor: vertical-text;
 }
 
 .div6 {
