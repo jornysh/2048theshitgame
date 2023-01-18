@@ -271,6 +271,6 @@ div {
 }
 
 .dark-body {
-    background: linear-gradient(45deg, #4B155C, #471578) no-repeat center center fixed;
+    background: linear-gradient(45deg, #4B155C, #0F1673) no-repeat center center fixed;
     background-size: 400% 400%;
 }
