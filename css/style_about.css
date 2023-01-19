@@ -1,7 +1,3 @@
-html {
-    cursor: url('/images/pointer.cur'), auto;
-}
-
 html, body, footer, .container {
     min-height: 100%;
     margin: 0;
