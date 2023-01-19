@@ -1,3 +1,7 @@
+html {
+    cursor: url('/images/pointer.cur'), auto;
+}
+
 html, body, footer, .container {
     min-height: 100%;
     margin: 0;
@@ -45,7 +49,7 @@ body {
 }
 
 .dark-body {
-    background: linear-gradient(45deg, #4B155C, #0F1673) no-repeat center center fixed;
+    background: linear-gradient(45deg, #4B155C, #471578) no-repeat center center fixed;
     background-size: 400% 400%;
 }
 
@@ -123,13 +127,10 @@ body {
     border-radius: 10px;
     margin: 10px 30px;
     /*outline: black dotted;*/
-    cursor: pointer;
 }
 
 .Upload-image:hover {
     filter: brightness(1.1);
-    cursor: pointer;
-
 }
 
 #file-input {
@@ -197,8 +198,6 @@ body {
     text-align: left;
     padding-left: 1%;
     padding-right: 1%;
-    overflow: hidden;
-    cursor: vertical-text;
 }
 
 .div6 {
