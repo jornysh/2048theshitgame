@@ -11,6 +11,13 @@ function startGame() {
     board[getRandomInt(16)-1] = getRandomInt(2) * 2;
     return board;
 }
+
+function checkIsMobile() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) return true;
+    return false;
+}
+
+if (checkIsMobile()) alert('You are playing on mobile phone, game is only available with keyboard. Support of sensor control will be added soon.')
 board = startGame();
 console.log(board);
 renderBoard();
