@@ -150,34 +150,41 @@ document.addEventListener('keydown', (event) => {
         let code = event.code;
         prevBoard = board;
         console.log(name);
+        let rightMove = false;
         if ((name === "ArrowUp") || (name === "w")) {
             moveUp(prevBoard);
+            rightMove = true;
         }
         if ((name === "ArrowDown") || (name === "s")) {
             moveDown(prevBoard);
+            rightMove = true;
         }
         if ((name === "ArrowLeft") || (name === "a")) {
             moveLeft(prevBoard);
+            rightMove = true;
         }
         if ((name === "ArrowRight") || (name === "d")) {
             moveRight(prevBoard);
+            rightMove = true;
         }
-        let generateNewCell = getRandomInt(3);
-        console.log(generateNewCell);
-        if ((generateNewCell === 2)) {
-            console.log('Generating New Cell...')
-            let flag = false
-            for (let pizdec = 0; pizdec < 16; pizdec++) {
-                if (board[pizdec] === 0) flag = true;
-            }
-            while (flag) {
-                let k = getRandomInt(16) - 1;
-                if (board[k] === 0) {
-                    board[k] = getRandomInt(2) * 2;
-                    flag = false;
+        if (rightMove) {
+            let generateNewCell = getRandomInt(3);
+            console.log(generateNewCell);
+            if ((generateNewCell === 2)) {
+                console.log('Generating New Cell...')
+                let flag = false
+                for (let pizdec = 0; pizdec < 16; pizdec++) {
+                    if (board[pizdec] === 0) flag = true;
                 }
+                while (flag) {
+                    let k = getRandomInt(16) - 1;
+                    if (board[k] === 0) {
+                        board[k] = getRandomInt(2) * 2;
+                        flag = false;
+                    }
+                }
+                console.log('Successfully!')
             }
-            console.log('Successfully!')
         }
         renderBoard();
         let gameBoard = document.querySelector('.game-board');
